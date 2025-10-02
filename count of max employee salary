@@ -1,0 +1,20 @@
+#Count of maximum employee salary more than 50000
+Salary=[25000, 48000, 52000, 61000, 75000, 30000]
+Salary_count=0
+for s in Salary:
+    if s >= 50000:
+        Salary_count+=1
+print (f"count of maximum Salary", Salary_count)
+
+data = {
+    'Name': ['Aman', 'Riya', 'Karan', 'Meena', 'Sara'],
+    'Department':['HR','IT','Sales','HR','IT'],
+    'Age': [25, 28,35,30,27],
+    'Salary':[40000,55000,60000,-45000,70000]
+}
+df = pd.DataFrame(data)
+print(df[df['Salary']>50000])
+df_row=df.drop_duplicates()
+print("delete duplicate rows:\n",df_row)
+df['Salary']=df['Salary'].abs()
+print(df)
